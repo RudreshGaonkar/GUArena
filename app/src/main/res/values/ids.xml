@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="til_new_password" type="id" />
+    <item name="et_new_password" type="id" />
+    <item name="et_current_password" type="id" />
+    <item name="til_current_password" type="id" />
+    <item name="btn_cancel" type="id" />
+    <item name="btn_change_password" type="id" />
+</resources>

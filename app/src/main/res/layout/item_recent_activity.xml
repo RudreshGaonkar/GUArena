@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_activity"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="2dp"
+    app:cardBackgroundColor="@color/surface"
+    android:foreground="?attr/selectableItemBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:gravity="center_vertical">
+
+        <!-- Activity Type Indicator -->
+        <View
+            android:id="@+id/view_activity_type_indicator"
+            android:layout_width="3dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="12dp"
+            android:background="@color/primary" />
+
+        <!-- Activity Icon -->
+        <ImageView
+            android:id="@+id/iv_activity_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_info"
+            app:tint="@color/primary"
+            android:layout_marginEnd="12dp" />
+
+        <!-- Activity Details -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_activity_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Event Created"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/on_surface"
+                android:maxLines="1"
+                android:ellipsize="end" />
+
+            <TextView
+                android:id="@+id/tv_activity_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Football practice scheduled for tomorrow"
+                android:textSize="12sp"
+                android:textColor="@color/gray"
+                android:layout_marginTop="2dp"
+                android:maxLines="2"
+                android:ellipsize="end" />
+
+        </LinearLayout>
+
+        <!-- Activity Time -->
+        <TextView
+            android:id="@+id/tv_activity_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2h ago"
+            android:textSize="10sp"
+            android:textColor="@color/gray"
+            android:layout_marginStart="8dp" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

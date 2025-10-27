@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_event"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header Row with Title and Menu -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tv_event_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:text="Event Title" />
+
+            <ImageView
+                android:id="@+id/iv_event_menu"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_more_vert"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:visibility="gone"
+                android:contentDescription="Event menu" />
+
+        </LinearLayout>
+
+        <!-- Event Type Chip -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_event_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Practice"
+                app:chipBackgroundColor="#E3F2FD"
+                android:textColor="#1976D2" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <!-- ✅ NEW: Participation Status -->
+        <TextView
+            android:id="@+id/tv_participation_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:text="🎯 You're participating!"
+            android:textColor="@android:color/holo_green_dark" />
+
+        <!-- Event Description -->
+        <TextView
+            android:id="@+id/tv_event_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:text="Event description goes here" />
+
+        <!-- Location Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_location"
+                android:layout_marginEnd="8dp"
+                android:contentDescription="Location" />
+
+            <TextView
+                android:id="@+id/tv_event_location"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:textColor="#666666"
+                android:text="Event location" />
+
+        </LinearLayout>
+
+        <!-- Date and Time Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_calendar"
+                android:layout_marginEnd="8dp"
+                android:contentDescription="Date and time" />
+
+            <TextView
+                android:id="@+id/tv_event_date_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:textColor="#666666"
+                android:text="Event date and time" />
+
+        </LinearLayout>
+
+        <!-- Team Info (if applicable) -->
+        <LinearLayout
+            android:id="@+id/ll_team_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_people"
+                android:layout_marginEnd="8dp"
+                android:contentDescription="Team" />
+
+            <TextView
+                android:id="@+id/tv_team_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:textColor="#666666"
+                android:text="Team name" />
+
+        </LinearLayout>
+
+        <!-- ✅ NEW: Action Buttons Row -->
+        <LinearLayout
+            android:id="@+id/ll_action_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:layout_marginTop="8dp"
+            android:visibility="gone">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_edit_event"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="Edit"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:textSize="12sp"
+                android:layout_marginEnd="8dp"
+                android:minWidth="60dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_delete_event"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="Delete"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="12sp"
+                android:minWidth="60dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    android:id="@+id/card_event"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:layout_marginBottom="12dp"-->
+<!--    app:cardCornerRadius="16dp"-->
+<!--    app:cardElevation="4dp"-->
+<!--    app:cardBackgroundColor="@color/surface"-->
+<!--    android:foreground="?attr/selectableItemBackground">-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical"-->
+<!--        android:padding="16dp">-->
+
+<!--        &lt;!&ndash; Header Row &ndash;&gt;-->
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:layout_marginBottom="8dp">-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/tv_event_title"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:text="Football Practice"-->
+<!--                android:textSize="18sp"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textColor="@color/on_surface" />-->
+
+<!--            <com.google.android.material.chip.Chip-->
+<!--                android:id="@+id/chip_event_type"-->
+<!--                style="@style/Widget.MaterialComponents.Chip.Entry"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="8dp"-->
+<!--                android:text="Practice"-->
+<!--                android:textSize="12sp" />-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/iv_event_menu"-->
+<!--                android:layout_width="24dp"-->
+<!--                android:layout_height="24dp"-->
+<!--                android:src="@drawable/ic_more_vert"-->
+<!--                android:layout_marginStart="8dp"-->
+<!--                android:background="?attr/selectableItemBackgroundBorderless"-->
+<!--                android:padding="4dp"-->
+<!--                app:tint="@color/gray" />-->
+
+<!--        </LinearLayout>-->
+
+<!--        &lt;!&ndash; Description &ndash;&gt;-->
+<!--        <TextView-->
+<!--            android:id="@+id/tv_event_description"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Regular team practice session"-->
+<!--            android:textSize="14sp"-->
+<!--            android:textColor="@color/gray"-->
+<!--            android:layout_marginBottom="8dp"-->
+<!--            android:maxLines="2"-->
+<!--            android:ellipsize="end" />-->
+
+<!--        &lt;!&ndash; Location and Time Row &ndash;&gt;-->
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:gravity="center_vertical">-->
+
+<!--            &lt;!&ndash; Location &ndash;&gt;-->
+<!--            <LinearLayout-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:gravity="center_vertical">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="16dp"-->
+<!--                    android:layout_height="16dp"-->
+<!--                    android:src="@drawable/ic_location"-->
+<!--                    app:tint="@color/primary"-->
+<!--                    android:layout_marginEnd="4dp" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/tv_event_location"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Main Ground"-->
+<!--                    android:textSize="12sp"-->
+<!--                    android:textColor="@color/gray" />-->
+
+<!--            </LinearLayout>-->
+
+<!--            &lt;!&ndash; Date Time &ndash;&gt;-->
+<!--            <LinearLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:gravity="center_vertical">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="16dp"-->
+<!--                    android:layout_height="16dp"-->
+<!--                    android:src="@drawable/ic_access_time"-->
+<!--                    app:tint="@color/primary"-->
+<!--                    android:layout_marginEnd="4dp" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/tv_event_date_time"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Dec 15, 2024 • 4:00 PM"-->
+<!--                    android:textSize="12sp"-->
+<!--                    android:textColor="@color/gray" />-->
+
+<!--            </LinearLayout>-->
+
+<!--        </LinearLayout>-->
+
+<!--    </LinearLayout>-->
+
+<!--</com.google.android.material.card.MaterialCardView>-->

@@ -1,0 +1,96 @@
+<!--<resources xmlns:tools="http://schemas.android.com/tools">-->
+<!--    &lt;!&ndash; Base application theme. &ndash;&gt;-->
+<!--    <style name="Base.Theme.Guarena" parent="Theme.Material3.DayNight.NoActionBar">-->
+<!--        &lt;!&ndash; Customize your light theme here. &ndash;&gt;-->
+<!--        <item name="colorPrimary">@color/primary</item>-->
+<!--        <item name="colorPrimaryVariant">@color/primary_dark</item>-->
+<!--        <item name="colorOnPrimary">@color/white</item>-->
+<!--        &lt;!&ndash; Secondary brand color. &ndash;&gt;-->
+<!--        <item name="colorSecondary">@color/accent</item>-->
+<!--        <item name="colorSecondaryVariant">@color/accent</item>-->
+<!--        <item name="colorOnSecondary">@color/black</item>-->
+<!--        &lt;!&ndash; Status bar color. &ndash;&gt;-->
+<!--        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>-->
+<!--        &lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+<!--    </style>-->
+
+
+<!--    <style name="DashboardCard">-->
+<!--        <item name="android:layout_width">0dp</item>-->
+<!--        <item name="android:layout_height">wrap_content</item>-->
+<!--        <item name="android:layout_columnWeight">1</item>-->
+<!--        <item name="android:layout_margin">8dp</item>-->
+<!--        <item name="android:background">@drawable/glass_card_background</item>-->
+<!--        <item name="android:gravity">center</item>-->
+<!--        <item name="android:orientation">vertical</item>-->
+<!--        <item name="android:padding">16dp</item>-->
+<!--    </style>-->
+
+<!--    <style name="DashboardIcon">-->
+<!--        <item name="android:layout_width">48dp</item>-->
+<!--        <item name="android:layout_height">48dp</item>-->
+<!--        <item name="android:layout_marginBottom">8dp</item>-->
+<!--        <item name="android:tint">@color/white</item>-->
+<!--    </style>-->
+
+<!--    <style name="DashboardText">-->
+<!--        <item name="android:layout_width">wrap_content</item>-->
+<!--        <item name="android:layout_height">wrap_content</item>-->
+<!--        <item name="android:textColor">@color/white</item>-->
+<!--        <item name="android:textSize">16sp</item>-->
+<!--        <item name="android:textStyle">bold</item>-->
+<!--    </style>-->
+
+<!--    <style name="Theme.Guarena" parent="Base.Theme.Guarena" />-->
+<!--</resources>-->
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme -->
+    <style name="Theme.Guarena" parent="Theme.Material3.DayNight">
+        <!-- Primary colors -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>  <!-- ✅ FIXED -->
+        <item name="colorOnPrimary">@color/on_primary</item>
+
+        <!-- Secondary colors -->
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorSecondaryVariant">@color/secondary_variant</item>
+        <item name="colorOnSecondary">@color/on_secondary</item>
+
+        <!-- Surface colors -->
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/on_surface</item>
+        <item name="android:colorBackground">@color/background</item>
+        <item name="colorOnBackground">@color/on_background</item>
+
+        <!-- Accent -->
+        <item name="colorAccent">@color/accent</item>
+
+        <!-- Status bar and navigation -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/primary_dark</item>
+        <item name="android:navigationBarColor">@color/primary_dark</item>
+
+        <!-- Window background -->
+        <item name="android:windowBackground">@color/background</item>
+    </style>
+
+    <!-- Splash Screen Theme -->
+    <style name="Theme.Guarena.Splash" parent="Theme.Material3.DayNight.NoActionBar">
+<!--        <item name="android:windowBackground">@drawable/splash_background</item>-->
+        <item name="android:statusBarColor">@color/primary</item>
+        <item name="android:navigationBarColor">@color/primary</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <!-- NoActionBar Theme -->
+    <style name="Theme.Guarena.NoActionBar" parent="Theme.Guarena">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!-- AppBar Overlay Theme -->
+    <style name="Theme.Guarena.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <!-- Popup Overlay Theme -->
+    <style name="Theme.Guarena.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>

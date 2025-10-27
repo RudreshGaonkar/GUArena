@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_edit_player"
+        android:icon="@drawable/ic_edit"
+        android:title="Edit Player" />
+
+    <item
+        android:id="@+id/action_remove_player"
+        android:icon="@drawable/ic_close"
+        android:title="Remove from Team" />
+
+</menu>

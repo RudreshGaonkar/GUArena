@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_gallery"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="@color/surface"
+    android:foreground="?attr/selectableItemBackground">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <!-- Main Image -->
+        <ImageView
+            android:id="@+id/iv_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/placeholder_image" />
+
+        <!-- Dark Overlay for Text Readability -->
+        <View
+            android:id="@+id/view_image_overlay"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_gravity="bottom"
+            android:background="@drawable/gradient_overlay"
+            android:visibility="visible" />
+
+        <!-- Image Info Overlay -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/tv_image_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Team Training Session"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:layout_marginBottom="4dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tv_uploaded_by"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="By John Doe"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:alpha="0.9"
+                    android:maxLines="1"
+                    android:ellipsize="end" />
+
+                <TextView
+                    android:id="@+id/tv_upload_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dec 15"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:alpha="0.9" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Menu Button -->
+        <ImageView
+            android:id="@+id/iv_image_menu"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_more_vert"
+            android:layout_gravity="top|end"
+            android:layout_margin="8dp"
+            android:background="@drawable/circle_background_transparent"
+            android:padding="6dp"
+            android:visibility="visible"
+            app:tint="@color/white" />
+
+    </FrameLayout>
+
+</com.google.android.material.card.MaterialCardView>

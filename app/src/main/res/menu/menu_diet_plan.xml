@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_nutrition_tips"
+        android:icon="@drawable/ic_lightbulb"
+        android:title="Nutrition Tips" />
+
+    <item
+        android:id="@+id/action_calorie_calculator"
+        android:icon="@drawable/ic_calculate"
+        android:title="Calorie Calculator" />
+
+</menu>

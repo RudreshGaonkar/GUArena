@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:id="@+id/card_events">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dashboard"
+            android:textColor="@color/white"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp"/>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="4">
+
+            <!-- Card 1: Event Scheduling -->
+            <LinearLayout style="@style/DashboardCard">
+                <ImageView style="@style/DashboardIcon" android:src="@drawable/ic_events"/>
+                <TextView style="@style/DashboardText" android:text="Events"/>
+            </LinearLayout>
+
+            <!-- Card 2: Team Management -->
+            <LinearLayout style="@style/DashboardCard">
+                <ImageView style="@style/DashboardIcon" android:src="@drawable/ic_teams"/>
+                <TextView style="@style/DashboardText" android:text="Teams"/>
+            </LinearLayout>
+
+            <!-- Card 3: Player Performance -->
+            <LinearLayout style="@style/DashboardCard">
+                <ImageView style="@style/DashboardIcon" android:src="@drawable/ic_performance"/>
+                <TextView style="@style/DashboardText" android:text="Performance"/>
+            </LinearLayout>
+
+            <!-- Card 4: Equipment -->
+            <LinearLayout style="@style/DashboardCard">
+                <ImageView style="@style/DashboardIcon" android:src="@drawable/ic_equipment"/>
+                <TextView style="@style/DashboardText" android:text="Equipment"/>
+            </LinearLayout>
+
+            <!-- Card 5: Attendance -->
+<!--            <LinearLayout style="@style/DashboardCard">-->
+<!--                <ImageView style="@style/DashboardIcon" android:src="@drawable/ic_attendance"/>-->
+<!--                <TextView style="@style/DashboardText" android:text="Attendance"/>-->
+<!--            </LinearLayout>-->
+
+            <!-- Card 6: Diet Plans -->
+            <LinearLayout style="@style/DashboardCard">
+                <ImageView style="@style/DashboardIcon" android:src="@drawable/ic_diet"/>
+                <TextView style="@style/DashboardText" android:text="Diet Plans"/>
+            </LinearLayout>
+
+            <!-- Card 7: Gym & Training -->
+            <LinearLayout style="@style/DashboardCard">
+                <ImageView style="@style/DashboardIcon" android:src="@drawable/ic_gym"/>
+                <TextView style="@style/DashboardText" android:text="Gym"/>
+            </LinearLayout>
+
+            <!-- Card 8: Profile -->
+            <LinearLayout style="@style/DashboardCard">
+                <ImageView style="@style/DashboardIcon" android:src="@drawable/ic_profile"/>
+                <TextView style="@style/DashboardText" android:text="Profile"/>
+            </LinearLayout>
+
+        </GridLayout>
+    </LinearLayout>
+</ScrollView>
