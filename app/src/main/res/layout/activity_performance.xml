@@ -31,18 +31,17 @@
         android:paddingBottom="80dp">
 
         <LinearLayout
+            android:id="@+id/ll_main_content"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="16dp">
 
-            <!-- Player Selection Card (for coaches/admins) -->
+            <!-- Coming Soon Card -->
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/card_player_selection"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:visibility="gone"
                 app:cardCornerRadius="16dp"
                 app:cardElevation="4dp"
                 app:cardBackgroundColor="@color/surface">
@@ -51,350 +50,32 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="20dp">
+                    android:gravity="center"
+                    android:padding="64dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Select Player"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/on_surface"
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/ic_assessment"
+                        android:alpha="0.3"
                         android:layout_marginBottom="16dp" />
 
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/til_player_selection"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Choose Player"
-                        app:boxCornerRadiusTopStart="12dp"
-                        app:boxCornerRadiusTopEnd="12dp"
-                        app:boxCornerRadiusBottomStart="12dp"
-                        app:boxCornerRadiusBottomEnd="12dp"
-                        app:startIconDrawable="@drawable/ic_profile"
-                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu">
-
-                        <AutoCompleteTextView
-                            android:id="@+id/et_player_selection"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:inputType="none"
-                            android:focusable="false"
-                            android:clickable="true" />
-
-                    </com.google.android.material.textfield.TextInputLayout>
-
-                </LinearLayout>
-
-            </com.google.android.material.card.MaterialCardView>
-
-            <!-- Performance Overview Card -->
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                app:cardCornerRadius="16dp"
-                app:cardElevation="4dp"
-                app:cardBackgroundColor="@color/primary">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="24dp">
-
                     <TextView
-                        android:id="@+id/tv_player_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="John Doe"
-                        android:textColor="@color/white"
+                        android:text="Coming Soon"
                         android:textSize="24sp"
                         android:textStyle="bold"
+                        android:textColor="@color/text_secondary"
                         android:layout_marginBottom="8dp" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
+                    <TextView
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <!-- Overall Rating -->
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:gravity="center">
-
-                            <TextView
-                                android:id="@+id/tv_overall_rating"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="8.5"
-                                android:textColor="@color/white"
-                                android:textSize="32sp"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Overall Rating"
-                                android:textColor="@color/white"
-                                android:textSize="12sp"
-                                android:alpha="0.9" />
-
-                        </LinearLayout>
-
-                        <!-- Games Played -->
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:gravity="center">
-
-                            <TextView
-                                android:id="@+id/tv_games_played"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="15"
-                                android:textColor="@color/white"
-                                android:textSize="32sp"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Games Played"
-                                android:textColor="@color/white"
-                                android:textSize="12sp"
-                                android:alpha="0.9" />
-
-                        </LinearLayout>
-
-                        <!-- Best Performance -->
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:gravity="center">
-
-                            <TextView
-                                android:id="@+id/tv_best_performance"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="9.8"
-                                android:textColor="@color/white"
-                                android:textSize="32sp"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Best Performance"
-                                android:textColor="@color/white"
-                                android:textSize="12sp"
-                                android:alpha="0.9" />
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-            </com.google.android.material.card.MaterialCardView>
-
-            <!-- Performance Chart Card -->
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                app:cardCornerRadius="16dp"
-                app:cardElevation="4dp"
-                app:cardBackgroundColor="@color/surface">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="20dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="center_vertical"
-                        android:layout_marginBottom="16dp">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Performance Trend"
-                            android:textSize="18sp"
-                            android:textStyle="bold"
-                            android:textColor="@color/on_surface" />
-
-                        <!-- Chart Type Toggle -->
-                        <com.google.android.material.button.MaterialButtonToggleGroup
-                            android:id="@+id/toggle_chart_type"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            app:singleSelection="true">
-
-                            <com.google.android.material.button.MaterialButton
-                                android:id="@+id/btn_line_chart"
-                                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                                android:layout_width="wrap_content"
-                                android:layout_height="36dp"
-                                android:text="Line"
-                                android:textSize="12sp"
-                                android:checked="true" />
-
-                            <com.google.android.material.button.MaterialButton
-                                android:id="@+id/btn_bar_chart"
-                                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                                android:layout_width="wrap_content"
-                                android:layout_height="37dp"
-                                android:text="Bar"
-                                android:textSize="12sp" />
-
-                        </com.google.android.material.button.MaterialButtonToggleGroup>
-
-                    </LinearLayout>
-
-                    <!-- Chart Container -->
-                    <FrameLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="250dp">
-
-                        <!-- Placeholder for Chart -->
-                        <LinearLayout
-                            android:id="@+id/ll_chart_placeholder"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical"
-                            android:gravity="center"
-                            android:background="@drawable/chart_background">
-
-                            <ImageView
-                                android:layout_width="64dp"
-                                android:layout_height="64dp"
-                                android:src="@drawable/ic_trending_up"
-                                android:alpha="0.3"
-                                android:layout_marginBottom="12dp" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Performance Chart"
-                                android:textSize="16sp"
-                                android:textColor="@color/gray"
-                                android:layout_marginBottom="4dp" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Chart will be displayed here"
-                                android:textSize="12sp"
-                                android:textColor="@color/gray"
-                                android:alpha="0.7" />
-
-                        </LinearLayout>
-
-                    </FrameLayout>
-
-                </LinearLayout>
-
-            </com.google.android.material.card.MaterialCardView>
-
-            <!-- Performance Records Card -->
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                app:cardCornerRadius="16dp"
-                app:cardElevation="4dp"
-                app:cardBackgroundColor="@color/surface">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="20dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="center_vertical"
-                        android:layout_marginBottom="16dp">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Performance History"
-                            android:textSize="18sp"
-                            android:textStyle="bold"
-                            android:textColor="@color/on_surface" />
-
-                        <!-- Filter Button -->
-                        <com.google.android.material.button.MaterialButton
-                            android:id="@+id/btn_filter_performance"
-                            style="@style/Widget.MaterialComponents.Button.TextButton"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Filter"
-                            app:icon="@drawable/ic_filter"
-                            android:textSize="12sp" />
-
-                    </LinearLayout>
-
-                    <!-- Performance List -->
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/rv_performance_history"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:nestedScrollingEnabled="false" />
-
-                    <!-- Empty State -->
-                    <LinearLayout
-                        android:id="@+id/ll_empty_performance"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:gravity="center"
-                        android:padding="32dp"
-                        android:visibility="gone">
-
-                        <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:src="@drawable/ic_assessment"
-                            android:alpha="0.3"
-                            android:layout_marginBottom="16dp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="No Performance Data"
-                            android:textSize="18sp"
-                            android:textStyle="bold"
-                            android:textColor="@color/gray"
-                            android:layout_marginBottom="8dp" />
-
-                        <TextView
-                            android:id="@+id/tv_empty_message"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Start recording performance to see statistics"
-                            android:textSize="14sp"
-                            android:textColor="@color/gray"
-                            android:textAlignment="center" />
-
-                    </LinearLayout>
+                        android:text="Performance tracking will be available soon"
+                        android:textSize="14sp"
+                        android:textColor="@color/text_secondary"
+                        android:textAlignment="center" />
 
                 </LinearLayout>
 
@@ -404,7 +85,7 @@
 
     </androidx.core.widget.NestedScrollView>
 
-    <!-- Floating Action Button (for recording performance) -->
+    <!-- Floating Action Button -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_record_performance"
         android:layout_width="wrap_content"
@@ -416,3 +97,423 @@
         app:backgroundTint="@color/secondary" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:background="@color/background">-->
+
+<!--    &lt;!&ndash; AppBar &ndash;&gt;-->
+<!--    <com.google.android.material.appbar.AppBarLayout-->
+<!--        android:id="@+id/app_bar_layout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">-->
+
+<!--        <com.google.android.material.appbar.MaterialToolbar-->
+<!--            android:id="@+id/toolbar"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="?attr/actionBarSize"-->
+<!--            android:background="@color/primary"-->
+<!--            app:title="Performance"-->
+<!--            app:titleTextColor="@color/white"-->
+<!--            app:navigationIcon="@drawable/ic_arrow_back" />-->
+
+<!--    </com.google.android.material.appbar.AppBarLayout>-->
+
+<!--    &lt;!&ndash; Main Content &ndash;&gt;-->
+<!--    <androidx.core.widget.NestedScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        app:layout_behavior="@string/appbar_scrolling_view_behavior"-->
+<!--        android:paddingBottom="80dp">-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical"-->
+<!--            android:padding="16dp">-->
+
+<!--            &lt;!&ndash; Player Selection Card (for coaches/admins) &ndash;&gt;-->
+<!--            <com.google.android.material.card.MaterialCardView-->
+<!--                android:id="@+id/card_player_selection"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginBottom="16dp"-->
+<!--                android:visibility="gone"-->
+<!--                app:cardCornerRadius="16dp"-->
+<!--                app:cardElevation="4dp"-->
+<!--                app:cardBackgroundColor="@color/surface">-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="vertical"-->
+<!--                    android:padding="20dp">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Select Player"-->
+<!--                        android:textSize="18sp"-->
+<!--                        android:textStyle="bold"-->
+<!--                        android:textColor="@color/on_surface"-->
+<!--                        android:layout_marginBottom="16dp" />-->
+
+<!--                    <com.google.android.material.textfield.TextInputLayout-->
+<!--                        android:id="@+id/til_player_selection"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:hint="Choose Player"-->
+<!--                        app:boxCornerRadiusTopStart="12dp"-->
+<!--                        app:boxCornerRadiusTopEnd="12dp"-->
+<!--                        app:boxCornerRadiusBottomStart="12dp"-->
+<!--                        app:boxCornerRadiusBottomEnd="12dp"-->
+<!--                        app:startIconDrawable="@drawable/ic_profile"-->
+<!--                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu">-->
+
+<!--                        <AutoCompleteTextView-->
+<!--                            android:id="@+id/et_player_selection"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:inputType="none"-->
+<!--                            android:focusable="false"-->
+<!--                            android:clickable="true" />-->
+
+<!--                    </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--                </LinearLayout>-->
+
+<!--            </com.google.android.material.card.MaterialCardView>-->
+
+<!--            &lt;!&ndash; Performance Overview Card &ndash;&gt;-->
+<!--            <com.google.android.material.card.MaterialCardView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginBottom="16dp"-->
+<!--                app:cardCornerRadius="16dp"-->
+<!--                app:cardElevation="4dp"-->
+<!--                app:cardBackgroundColor="@color/primary">-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="vertical"-->
+<!--                    android:padding="24dp">-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/tv_player_name"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="John Doe"-->
+<!--                        android:textColor="@color/white"-->
+<!--                        android:textSize="24sp"-->
+<!--                        android:textStyle="bold"-->
+<!--                        android:layout_marginBottom="8dp" />-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="horizontal">-->
+
+<!--                        &lt;!&ndash; Overall Rating &ndash;&gt;-->
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="0dp"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_weight="1"-->
+<!--                            android:orientation="vertical"-->
+<!--                            android:gravity="center">-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/tv_overall_rating"-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:text="8.5"-->
+<!--                                android:textColor="@color/white"-->
+<!--                                android:textSize="32sp"-->
+<!--                                android:textStyle="bold" />-->
+
+<!--                            <TextView-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:text="Overall Rating"-->
+<!--                                android:textColor="@color/white"-->
+<!--                                android:textSize="12sp"-->
+<!--                                android:alpha="0.9" />-->
+
+<!--                        </LinearLayout>-->
+
+<!--                        &lt;!&ndash; Games Played &ndash;&gt;-->
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="0dp"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_weight="1"-->
+<!--                            android:orientation="vertical"-->
+<!--                            android:gravity="center">-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/tv_games_played"-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:text="15"-->
+<!--                                android:textColor="@color/white"-->
+<!--                                android:textSize="32sp"-->
+<!--                                android:textStyle="bold" />-->
+
+<!--                            <TextView-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:text="Games Played"-->
+<!--                                android:textColor="@color/white"-->
+<!--                                android:textSize="12sp"-->
+<!--                                android:alpha="0.9" />-->
+
+<!--                        </LinearLayout>-->
+
+<!--                        &lt;!&ndash; Best Performance &ndash;&gt;-->
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="0dp"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_weight="1"-->
+<!--                            android:orientation="vertical"-->
+<!--                            android:gravity="center">-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/tv_best_performance"-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:text="9.8"-->
+<!--                                android:textColor="@color/white"-->
+<!--                                android:textSize="32sp"-->
+<!--                                android:textStyle="bold" />-->
+
+<!--                            <TextView-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:text="Best Performance"-->
+<!--                                android:textColor="@color/white"-->
+<!--                                android:textSize="12sp"-->
+<!--                                android:alpha="0.9" />-->
+
+<!--                        </LinearLayout>-->
+
+<!--                    </LinearLayout>-->
+
+<!--                </LinearLayout>-->
+
+<!--            </com.google.android.material.card.MaterialCardView>-->
+
+<!--            &lt;!&ndash; Performance Chart Card &ndash;&gt;-->
+<!--            <com.google.android.material.card.MaterialCardView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginBottom="16dp"-->
+<!--                app:cardCornerRadius="16dp"-->
+<!--                app:cardElevation="4dp"-->
+<!--                app:cardBackgroundColor="@color/surface">-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="vertical"-->
+<!--                    android:padding="20dp">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="horizontal"-->
+<!--                        android:gravity="center_vertical"-->
+<!--                        android:layout_marginBottom="16dp">-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="0dp"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_weight="1"-->
+<!--                            android:text="Performance Trend"-->
+<!--                            android:textSize="18sp"-->
+<!--                            android:textStyle="bold"-->
+<!--                            android:textColor="@color/on_surface" />-->
+
+<!--                        &lt;!&ndash; Chart Type Toggle &ndash;&gt;-->
+<!--                        <com.google.android.material.button.MaterialButtonToggleGroup-->
+<!--                            android:id="@+id/toggle_chart_type"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            app:singleSelection="true">-->
+
+<!--                            <com.google.android.material.button.MaterialButton-->
+<!--                                android:id="@+id/btn_line_chart"-->
+<!--                                style="@style/Widget.MaterialComponents.Button.OutlinedButton"-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="36dp"-->
+<!--                                android:text="Line"-->
+<!--                                android:textSize="12sp"-->
+<!--                                android:checked="true" />-->
+
+<!--                            <com.google.android.material.button.MaterialButton-->
+<!--                                android:id="@+id/btn_bar_chart"-->
+<!--                                style="@style/Widget.MaterialComponents.Button.OutlinedButton"-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="37dp"-->
+<!--                                android:text="Bar"-->
+<!--                                android:textSize="12sp" />-->
+
+<!--                        </com.google.android.material.button.MaterialButtonToggleGroup>-->
+
+<!--                    </LinearLayout>-->
+
+<!--                    &lt;!&ndash; Chart Container &ndash;&gt;-->
+<!--                    <FrameLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="250dp">-->
+
+<!--                        &lt;!&ndash; Placeholder for Chart &ndash;&gt;-->
+<!--                        <LinearLayout-->
+<!--                            android:id="@+id/ll_chart_placeholder"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:orientation="vertical"-->
+<!--                            android:gravity="center"-->
+<!--                            android:background="@drawable/chart_background">-->
+
+<!--                            <ImageView-->
+<!--                                android:layout_width="64dp"-->
+<!--                                android:layout_height="64dp"-->
+<!--                                android:src="@drawable/ic_trending_up"-->
+<!--                                android:alpha="0.3"-->
+<!--                                android:layout_marginBottom="12dp" />-->
+
+<!--                            <TextView-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:text="Performance Chart"-->
+<!--                                android:textSize="16sp"-->
+<!--                                android:textColor="@color/gray"-->
+<!--                                android:layout_marginBottom="4dp" />-->
+
+<!--                            <TextView-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:text="Chart will be displayed here"-->
+<!--                                android:textSize="12sp"-->
+<!--                                android:textColor="@color/gray"-->
+<!--                                android:alpha="0.7" />-->
+
+<!--                        </LinearLayout>-->
+
+<!--                    </FrameLayout>-->
+
+<!--                </LinearLayout>-->
+
+<!--            </com.google.android.material.card.MaterialCardView>-->
+
+<!--            &lt;!&ndash; Performance Records Card &ndash;&gt;-->
+<!--            <com.google.android.material.card.MaterialCardView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginBottom="16dp"-->
+<!--                app:cardCornerRadius="16dp"-->
+<!--                app:cardElevation="4dp"-->
+<!--                app:cardBackgroundColor="@color/surface">-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="vertical"-->
+<!--                    android:padding="20dp">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="horizontal"-->
+<!--                        android:gravity="center_vertical"-->
+<!--                        android:layout_marginBottom="16dp">-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="0dp"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_weight="1"-->
+<!--                            android:text="Performance History"-->
+<!--                            android:textSize="18sp"-->
+<!--                            android:textStyle="bold"-->
+<!--                            android:textColor="@color/on_surface" />-->
+
+<!--                        &lt;!&ndash; Filter Button &ndash;&gt;-->
+<!--                        <com.google.android.material.button.MaterialButton-->
+<!--                            android:id="@+id/btn_filter_performance"-->
+<!--                            style="@style/Widget.MaterialComponents.Button.TextButton"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="Filter"-->
+<!--                            app:icon="@drawable/ic_filter"-->
+<!--                            android:textSize="12sp" />-->
+
+<!--                    </LinearLayout>-->
+
+<!--                    &lt;!&ndash; Performance List &ndash;&gt;-->
+<!--                    <androidx.recyclerview.widget.RecyclerView-->
+<!--                        android:id="@+id/rv_performance_history"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:nestedScrollingEnabled="false" />-->
+
+<!--                    &lt;!&ndash; Empty State &ndash;&gt;-->
+<!--                    <LinearLayout-->
+<!--                        android:id="@+id/ll_empty_performance"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="vertical"-->
+<!--                        android:gravity="center"-->
+<!--                        android:padding="32dp"-->
+<!--                        android:visibility="gone">-->
+
+<!--                        <ImageView-->
+<!--                            android:layout_width="80dp"-->
+<!--                            android:layout_height="80dp"-->
+<!--                            android:src="@drawable/ic_assessment"-->
+<!--                            android:alpha="0.3"-->
+<!--                            android:layout_marginBottom="16dp" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="No Performance Data"-->
+<!--                            android:textSize="18sp"-->
+<!--                            android:textStyle="bold"-->
+<!--                            android:textColor="@color/gray"-->
+<!--                            android:layout_marginBottom="8dp" />-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/tv_empty_message"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="Start recording performance to see statistics"-->
+<!--                            android:textSize="14sp"-->
+<!--                            android:textColor="@color/gray"-->
+<!--                            android:textAlignment="center" />-->
+
+<!--                    </LinearLayout>-->
+
+<!--                </LinearLayout>-->
+
+<!--            </com.google.android.material.card.MaterialCardView>-->
+
+<!--        </LinearLayout>-->
+
+<!--    </androidx.core.widget.NestedScrollView>-->
+
+<!--    &lt;!&ndash; Floating Action Button (for recording performance) &ndash;&gt;-->
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/fab_record_performance"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="16dp"-->
+<!--        android:layout_gravity="bottom|end"-->
+<!--        android:src="@drawable/ic_add"-->
+<!--        android:contentDescription="Record performance"-->
+<!--        app:backgroundTint="@color/secondary" />-->
+
+<!--</androidx.coordinatorlayout.widget.CoordinatorLayout>-->
